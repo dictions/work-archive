@@ -1,0 +1,95 @@
+$spacer-directions: top, bottom, left, right;
+$spacer-max: 4;
+$spacer-gutter: $grid-gutter;
+
+// Margin + padding
+
+@each $side in $spacer-directions {
+	@each $gutter-name, $gutter-size in $grid-gutter-extra {
+		.margin-#{$side + '--' + $gutter-name} {
+			margin-#{$side}: $gutter-size !important;
+		}
+		
+		.padding-#{$side + '--' + $gutter-name} {
+			padding-#{$side}: $gutter-size !important;
+		}
+	}
+}
+
+@each $gutter-name, $gutter-size in $grid-gutter-extra {
+	.margin--#{$gutter-name} {
+		margin: $gutter-size !important;
+	}
+	.padding--#{$gutter-name} {
+		padding: $gutter-size !important;
+	}
+}
+
+@for $i from 0 through $spacer-max {
+	@each $side in $spacer-directions {
+		.margin-#{$side + '--' + $i} {
+			margin-#{$side}: $i * $spacer-gutter !important;
+		}
+		
+		.padding-#{$side + '--' + $i} {
+			padding-#{$side}: $i * $spacer-gutter !important;
+		}
+	}
+	
+	.margin--#{$i} {
+		margin: $i * $spacer-gutter !important;
+	}
+	.padding--#{$i} {
+		padding: $i * $spacer-gutter !important;
+	}
+}
+
+// Responsive margin + padding
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		@each $gutter-name, $gutter-size in $grid-gutter-extra {
+			.margin--#{$gutter-name + '--' + $breakpoint-name} {
+				margin: $gutter-size !important;
+			}
+			.padding--#{$gutter-name + '--' + $breakpoint-name} {
+				padding: $gutter-size !important;
+			}
+			
+			@for $i from 1 through $spacer-max {
+				.margin--#{$i + '--' + $breakpoint-name} {
+					margin: $i * $spacer-gutter !important;
+				}
+				
+				.padding--#{$i + '--' + $breakpoint-name} {
+					padding: $i * $spacer-gutter !important;
+				}
+			}
+		}
+		
+		@each $side in $spacer-directions {
+			@each $gutter-name, $gutter-size in $grid-gutter-extra {
+				.margin-#{$side + '--' + $gutter-name + '--' + $breakpoint-name} {
+					margin-#{$side}: $gutter-size !important;
+				}
+				
+				.padding-#{$side + '--' + $gutter-name + '--' + $breakpoint-name} {
+					padding-#{$side}: $gutter-size !important;
+				}
+			}
+			
+			@for $i from 1 through $spacer-max {
+				@each $side in $spacer-directions {
+					.margin-#{$side + '--' + $i + '--' + $breakpoint-name} {
+						margin-#{$side}: $i * $spacer-gutter !important;
+					}
+					
+					.padding-#{$side + '--' + $i + '--' + $breakpoint-name} {
+						padding-#{$side}: $i * $spacer-gutter !important;
+					}
+				}
+			}
+		}
+	}
+}
+
