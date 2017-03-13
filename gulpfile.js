@@ -34,7 +34,7 @@ gulp.task('svg', function() {
 gulp.task('js', () => {
 	return gulp.src('./src/**/*.js')
 		.pipe(rollup({
-			entry: './src/index.js'
+			entry: './src/app.js'
 		}))
 		.pipe(babel())
 		.pipe(uglify())
@@ -43,7 +43,7 @@ gulp.task('js', () => {
 });
  
 gulp.task('sass', function() {
-	return gulp.src('./src/styles/index.scss')
+	return gulp.src('./src/styles/app.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(cleanCSS({compatibility: 'ie8'}))
 		.pipe(gulp.dest('./build/assets'));

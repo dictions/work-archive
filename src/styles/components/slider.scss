@@ -1,0 +1,52 @@
+.swiper-container {
+	cursor: move;
+}
+
+.swiper-container.swiper-container {
+	overflow: visible;
+	position: relative;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -100%;
+		right: calc(100% - 20px);
+		background: $color-black;
+		z-index: 100;
+		
+		@include breakpoint(md) {
+			right: calc(100% - 40px);
+		}
+	}
+}
+
+.slide--desktop {
+	width: 90%;
+	
+	@include breakpoint(md) {
+		width: 60%;
+	}
+	
+	@include breakpoint(lg) {
+		width: 53.8%;
+	}
+}
+
+.slide--mobile {
+	width: 35.6%;
+	
+	@include breakpoint(md) {
+		width: 23.65%;
+	}
+	
+	@include breakpoint(lg) {
+		width: 21.2%;
+	}
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: auto;
+}
