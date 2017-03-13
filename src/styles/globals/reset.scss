@@ -62,6 +62,8 @@ body {
 	font-style: normal;
 	text-transform: initial;
 	letter-spacing: initial;
+	overflow-x: hidden;
+	overflow-y: auto;
 	
 	@include breakpoint(md) {
 		font-size: 18px;
