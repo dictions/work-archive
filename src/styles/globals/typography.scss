@@ -8,3 +8,19 @@
 .small {
 	font-size: 14px;
 }
+
+.gray {
+	color: $color-gray;
+}
+
+.underline {
+	border-bottom: 1px solid;
+}
+
+.underline--hover {
+	&:hover { border-bottom: 1px solid; }
+}
+
+.align-right {
+	text-align: right;
+}

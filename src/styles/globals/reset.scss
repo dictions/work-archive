@@ -78,5 +78,5 @@ a {
 	* { cursor: pointer; }
 }
 
-*::-moz-selection { background: white; color: $color-black; }
-*::selection      { background: white; color: $color-black; }
+*::-moz-selection { background: rgba(255,255,255,0.99); color: $color-black; }
+*::selection      { background: rgba(255,255,255,0.99); color: $color-black; }

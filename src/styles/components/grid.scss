@@ -1,12 +1,3 @@
-$column-sizes: 12;
-$grid-gutter: 40px;
-$grid-gutter-extra: (
-	smaller : 10px,
-	small   : 20px,
-	default : $grid-gutter
-);
-
-
 .grid-row {
 	margin-left: $grid-gutter / -2;
 	margin-right: $grid-gutter / -2;

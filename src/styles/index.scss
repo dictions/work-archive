@@ -1,9 +1,10 @@
 @import './globals/config';
 @import './globals/typography';
 @import './globals/reset';
-@import './globals/utilities';
 
 @import './components/grid';
 @import './components/spacer';
+@import './components/table';
 @import './components/list';
 @import './components/legend';
+@import './components/visibility';

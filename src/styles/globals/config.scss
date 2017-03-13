@@ -1,4 +1,5 @@
 $color-black: #121212;
+$color-gray: #646464;
 $color-red: #7C3737;
 $color-blue: #37707C;
 
@@ -20,3 +21,12 @@ $breakpoints : (
 		@warn "Breakpoint size " + #{$size} + " doesn't exist."
 	}
 }
+
+$column-sizes: 12;
+$grid-gutter: 40px;
+$grid-gutter-extra: (
+	none    : 0px,
+	smaller : 10px,
+	small   : 20px,
+	default : $grid-gutter
+);
