@@ -34,7 +34,8 @@ gulp.task('svg', function() {
 gulp.task('js', () => {
 	return gulp.src('./src/**/*.js')
 		.pipe(rollup({
-			entry: './src/app.js'
+			entry: './src/app.js',
+			format: 'es'
 		}))
 		.pipe(babel())
 		.pipe(uglify())

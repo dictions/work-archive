@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="/assets/app.css" />
 	</head>
 	<body class="padding-top--1 padding-top--2--md">
-		<header class="grid-container margin-bottom--1 margin-bottom--2--sm margin-bottom--4--md">
+		<header class="grid-container margin-bottom--2 margin-bottom--4--lg">
 			<div class="grid-row">
 				<div class="grid-col c6-12 c3-12--md margin-bottom--small">
 					<h1>Selected Works<h1>
@@ -41,28 +41,36 @@
 		</header>
 		
 		
-		<div class="swiper-container grid-container margin-bottom--1 margin-bottom--2--sm margin-bottom--4--lg">
-			<ul class="swiper-wrapper">
-				<li class="swiper-slide slide--desktop">
+		<div class="js-work-slider grid-container margin-bottom--2 margin-bottom--4--lg">
+			<ul class="swiper-wrapper margin-bottom--small">
+				<li data-work='{"title": "Red Rooster", "role": "Another One", "mono": true}' class="swiper-slide slide--desktop">
 					<img src="/images/browser.svg" />
 				</li>
-				<li class="swiper-slide slide--mobile">
+				<li data-work='{"title": "OTHER Studio", "role": "Another Two", "self": true, "mono": true}' class="swiper-slide slide--mobile">
 					<img src="/images/iphone.svg" />
 				</li>
-				<li class="swiper-slide slide--desktop">
+				<li data-work='{"title": "Formlets", "role": "Another Three", "self": true}' class="swiper-slide slide--desktop">
 					<img src="/images/browser.svg" />
 				</li>
-				<li class="swiper-slide slide--mobile">
+				<li data-work='{"title": "Yooo Yooo", "role": "Another Four", "mono": true}' class="swiper-slide slide--mobile">
 					<img src="/images/iphone.svg" />
 				</li>
-				<li class="swiper-slide slide--desktop">
+				<li data-work='{"title": "Holler Back", "role": "Another Five", "self": true}' class="swiper-slide slide--desktop">
 					<img src="/images/browser.svg" />
 				</li>
-				<li class="swiper-slide slide--mobile">
+				<li data-work='{"title": "Red Rooster", "role": "Another Six"}' class="swiper-slide slide--mobile">
 					<img src="/images/iphone.svg" />
 				</li>
 			</ul>
-			<div class="swiper-pagination"></div>
+			<div class="work-label">
+				<p class="work-label__title">&nbsp;</p>
+				<p class="work-label__role gray">&nbsp;</p>
+				<ul class="list list--horizontal list--gutter-smaller list--align-middle">
+					<li class="list-item"><div class="key-case"></div></li>
+					<li style="display:none;" class="work-label__self list-item"><div class="key-self"></div></li>
+					<li style="display:none;" class="work-label__mono list-item"><div class="key-mono"></div></li>
+				</ul>
+			</div>
 		</div>
 		
 		<div class="grid-container margin-bottom--1 margin-bottom--2--md">
@@ -78,7 +86,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -103,7 +111,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -128,7 +136,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -153,7 +161,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -178,7 +186,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -203,7 +211,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -234,7 +242,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -259,7 +267,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -284,7 +292,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -309,7 +317,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -334,7 +342,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">
@@ -359,7 +367,7 @@
 								<ul class="list list--horizontal list--gutter-smaller list--align-middle">
 									<li class="list-item">OTHER Studio</li>
 									<li class="list-item"><div class="key-case"></div></li>
-									<li class="list-item"><img src="/images/mono.svg"/></li>
+									<li class="list-item"><div class="key-mono"></div></li>
 								</ul>
 							</div>
 							<div class="grid-col c12-12 c4-12--lg">

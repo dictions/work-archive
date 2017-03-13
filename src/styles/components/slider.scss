@@ -15,6 +15,10 @@
 		right: calc(100% - 10px);
 		background: $color-black;
 		z-index: 100;
+		
+		@include breakpoint(md) {
+			right: calc(100% - 40px);
+		}
 	}
 }
 
