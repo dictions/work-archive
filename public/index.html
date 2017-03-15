@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>Work Archive - Ian Williams - Product Designer and Software Engineer</title>
-		<link rel="stylesheet" href="/assets/swiper.min.css" />
+		<link rel="stylesheet" href="/lib/swiper.min.css" />
 		<link rel="stylesheet" href="/assets/app.css" />
 	</head>
 	<body class="padding-top--1 padding-top--2--md">
@@ -18,7 +18,7 @@
 					<h2>2013—Today<h2>
 				</div>
 				<div class="grid-col c12-12 c8-12--sm c6-12--md margin-bottom--small">
-					<p class="margin-bottom--small margin-bottom-1--md">Ian Williams is a product designer and software engineer living and working in Appalachia. The following is an archive of work spanning his career.<p>
+					<p class="margin-bottom--small margin-bottom-1--md">Ian Williams is a product designer and software engineer living and working in Appalachia. The following is an archive of work spanning the last 5 years of his career.<p>
 					
 					<ul class="list list--gutter-none list--vertical list--horizontal--md">
 						<li class="list-item small margin-bottom--small margin-bottom--none--md margin-right--1--md">
@@ -33,7 +33,7 @@
 						
 						<li class="list-item small">
 							<p class="gray" style="margin-bottom:8px">w/ Mono Mono</p>
-							<img src="/images/mono.svg"/>
+							<img src="/assets/mono.svg"/>
 						</li>
 					</ul>
 				</div>
@@ -41,35 +41,45 @@
 		</header>
 		
 		
-		<div class="js-work-slider grid-container margin-bottom--2 margin-bottom--4--lg">
+		<div class="js-work-slider swiper-container grid-container margin-bottom--2 margin-bottom--4--lg">
 			<ul class="swiper-wrapper margin-bottom--small">
 				<li data-work='{"title": "Red Rooster", "role": "Another One", "mono": true}' class="swiper-slide slide--desktop">
-					<img src="/images/browser.svg" />
+					<img src="/2016/red_rooster_site/featured.png" />
 				</li>
 				<li data-work='{"title": "OTHER Studio", "role": "Another Two", "self": true, "mono": true}' class="swiper-slide slide--mobile">
-					<img src="/images/iphone.svg" />
+					<img src="/2015/earnest_careers/featured.png" />
 				</li>
-				<li data-work='{"title": "Formlets", "role": "Another Three", "self": true}' class="swiper-slide slide--desktop">
-					<img src="/images/browser.svg" />
+				<li data-work='{"title": "Red Rooster", "role": "Another One", "mono": true}' class="swiper-slide slide--desktop">
+					<img src="/2016/red_rooster_site/featured.png" />
 				</li>
-				<li data-work='{"title": "Yooo Yooo", "role": "Another Four", "mono": true}' class="swiper-slide slide--mobile">
-					<img src="/images/iphone.svg" />
+				<li data-work='{"title": "OTHER Studio", "role": "Another Two", "self": true, "mono": true}' class="swiper-slide slide--mobile">
+					<img src="/2015/earnest_careers/featured.png" />
 				</li>
-				<li data-work='{"title": "Holler Back", "role": "Another Five", "self": true}' class="swiper-slide slide--desktop">
-					<img src="/images/browser.svg" />
+				<li data-work='{"title": "Red Rooster", "role": "Another One", "mono": true}' class="swiper-slide slide--desktop">
+					<img src="/2016/red_rooster_site/featured.png" />
 				</li>
-				<li data-work='{"title": "Red Rooster", "role": "Another Six"}' class="swiper-slide slide--mobile">
-					<img src="/images/iphone.svg" />
+				<li data-work='{"title": "OTHER Studio", "role": "Another Two", "self": true, "mono": true}' class="swiper-slide slide--mobile">
+					<img src="/2015/earnest_careers/featured.png" />
 				</li>
 			</ul>
-			<div class="work-label">
-				<p class="work-label__title">&nbsp;</p>
-				<p class="work-label__role gray">&nbsp;</p>
-				<ul class="list list--horizontal list--gutter-smaller list--align-middle">
-					<li class="list-item"><div class="key-case"></div></li>
-					<li style="display:none;" class="work-label__self list-item"><div class="key-self"></div></li>
-					<li style="display:none;" class="work-label__mono list-item"><div class="key-mono"></div></li>
+			<div class="media">
+				<ul class="list list--horizontal list--gutter-smaller margin-right--small">
+					<li class="list-item work-slide__prev">
+						<img src="/assets/back.svg"/>
+					</li>
+					<li class="list-item work-slide__next">
+						<img src="/assets/forward.svg"/>
+					</li>
 				</ul>
+				<div class="media-fluid">
+					<p class="work-label__title">&nbsp;</p>
+					<p class="work-label__role gray">&nbsp;</p>
+					<ul class="list list--horizontal list--gutter-smaller list--align-middle">
+						<li class="list-item"><div class="key-case"></div></li>
+						<li style="display:none;" class="work-label__self list-item"><div class="key-self"></div></li>
+						<li style="display:none;" class="work-label__mono list-item"><div class="key-mono"></div></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		
@@ -388,7 +398,7 @@
 		<footer class="grid-container margin-bottom--1 margin-bottom--2--md">
 			<div class="grid-row">
 				<div class="grid-col c12-12 c3-12--md margin-bottom--small">
-					2017
+					2013-Today
 				</div>
 				
 				<div class="grid-col c12-12 c3-12--md margin-bottom--small">
@@ -414,6 +424,6 @@
 		</footer>
 	</body>
 	
-	<script src="/assets/swiper.min.js"></script>
+	<script src="/lib/swiper.min.js"></script>
 	<script src="/assets/app.js"></script>
 </html>

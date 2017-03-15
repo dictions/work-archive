@@ -1,0 +1,42 @@
+.media {
+	display: flex;
+	align-items: flex-start;
+}
+
+.media.align--top {
+  align-items: flex-start;
+}
+
+.media.align--middle {
+  align-items: center;
+}
+
+.media.align--bottom {
+  align-items: flex-end;
+}
+
+.media-fluid {
+	flex: 1;
+}
+
+.media--reverse {
+	.media-fixed {
+		order: 1;
+	}
+}
+
+// Gutter
+
+@each $gutter-name, $gutter-size in $grid-gutter-extra {
+	.media.media--forward.gutter--#{$gutter-name} {
+		.media-fixed {
+			margin-right: $gutter-size;
+		}
+	}
+
+	.media.media--reverse.gutter--#{$gutter-name} {
+		.media-fixed {
+			margin-left: $gutter-size;
+		}
+	}
+}

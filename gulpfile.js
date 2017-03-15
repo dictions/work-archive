@@ -17,18 +17,13 @@ gulp.task('serve', serve(['build']));
 gulp.task('html', function() {
 	return gulp.src('public/**/*.html')
 		.pipe(htmlmin({collapseWhitespace: true}))
+		.on('error', console.log)
 		.pipe(gulp.dest('build'));
 });
 
-gulp.task('assets', function() {
-	return gulp.src('./public/assets/**/*')
-		.pipe(gulp.dest('./build/assets'));
-});
-
-gulp.task('svg', function() {
-	return gulp.src('public/images/**/*.svg')
-		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(gulp.dest('build/images'));
+gulp.task('content', function() {
+	return gulp.src(['./public/**/*', '!./public/**/*.html'])
+		.pipe(gulp.dest('./build'));
 });
 
 gulp.task('js', () => {
@@ -47,6 +42,7 @@ gulp.task('sass', function() {
 	return gulp.src('./src/styles/app.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(cleanCSS({compatibility: 'ie8'}))
+		.on('error', console.log)
 		.pipe(gulp.dest('./build/assets'));
 });
 
@@ -58,12 +54,8 @@ gulp.task('html:watch', function() {
 	gulp.watch('./public/**/*.html', ['html']);
 });
 
-gulp.task('assets:watch', function() {
-	gulp.watch('./public/assets/**/*', ['assets']);
-});
-
-gulp.task('svg:watch', function() {
-	gulp.watch('./public/images/**/*.svg', ['svg']);
+gulp.task('content:watch', function() {
+	gulp.watch('./public/**/*', ['content']);
 });
 
 gulp.task('js:watch', function() {
@@ -81,5 +73,11 @@ gulp.task('deploy', function() {
 	.pipe(ghPages());
 });
 
-gulp.task('default', ['html', 'svg', 'js', 'sass', 'assets']);
-gulp.task('watch', ['serve', 'js:watch', 'sass:watch', 'html:watch', 'svg:watch', 'assets:watch',]);
+gulp.task('default', ['html', 'content', 'js', 'sass']);
+gulp.task('watch', [
+	'serve',
+	'html:watch',
+	'content:watch',
+	'js:watch',
+	'sass:watch'
+]);

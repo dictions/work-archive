@@ -7,6 +7,8 @@ export default containerSelector => {
 		slidesPerView: 'auto',
 		spaceBetween: 40,
 		loop: true,
+		prevButton: '.work-slide__prev',
+		nextButton: '.work-slide__next',
 		
 		breakpoints: {
 			799: { spaceBetween: 20 }
