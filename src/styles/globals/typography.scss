@@ -1,3 +1,10 @@
+@font-face {
+	font-family: 'GTA';
+	src: url("/assets/gt-america.woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
 .small {
 	font-size: 14px;
 }
@@ -14,11 +21,40 @@
 	&:hover { border-bottom: 1px solid; }
 }
 
+.underline--hover-trigger {
+	&:hover {
+		.underline--hover-trigger__text {
+			border-bottom: 1px solid;
+		}
+	}
+}
+
 .align-right {
 	text-align: right;
 }
 
-a.gray.underline:hover,
-a.gray.underline--hover:hover {
+.white--hover:hover {
 	color: white;
+}
+
+.external-link {
+	width: 12px;
+}
+
+.gray.white--hover {
+	.external-link {
+		opacity: 0.4;
+	}
+	
+	&:hover .external-link {
+		opacity: 1;
+	}
+}
+
+.display-block {
+	display: block;
+}
+
+.display-inline-block {
+	display: inline-block;
 }

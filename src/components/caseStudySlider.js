@@ -15,6 +15,7 @@ export default containerSelector => {
 			799: { spaceBetween: 20 }
 		}
 	});
+	const slideLink = sliderContainer.querySelector('.work-label__link');
 	const slideTitle = sliderContainer.querySelector('.work-label__title');
 	const slideRole = sliderContainer.querySelector('.work-label__role');
 	const slideSelfInitiated = sliderContainer.querySelector('.work-label__self');
@@ -26,9 +27,8 @@ export default containerSelector => {
 		let {work} = currentSlide.dataset;
 		work = JSON.parse(work);
 		
-		slideTitle.innerHTML = (`
-			<a class="underline--hover" href="${work.link}">${work.title}</a>
-		`);
+		slideLink.setAttribute('href', work.link);
+		slideTitle.innerHTML = work.title;
 		slideRole.innerHTML = work.role;
 		
 		if (work.self) {
