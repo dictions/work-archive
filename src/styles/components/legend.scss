@@ -2,6 +2,7 @@
 .key-case,
 .key-self {
 	height: 20px;
+	display: block;
 }
 
 .key-case,
@@ -26,7 +27,7 @@
 
 
 .key-case {
-	background: linear-gradient(to right, $color-blue, rgba($color-blue, 0));
+	background: linear-gradient(to right, $color-teal, rgba($color-teal, 0));
 }
 
 .key-self {

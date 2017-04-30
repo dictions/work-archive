@@ -9,7 +9,6 @@ export default containerSelector => {
 		loop: true,
 		prevButton: '.work-slide__prev',
 		nextButton: '.work-slide__next',
-		
 		breakpoints: {
 			799: { spaceBetween: 20 }
 		}
@@ -25,7 +24,9 @@ export default containerSelector => {
 		let {work} = currentSlide.dataset;
 		work = JSON.parse(work);
 		
-		slideTitle.innerHTML = work.title;
+		slideTitle.innerHTML = (`
+			<a class="underline--hover" href="${work.link}">${work.title}</a>
+		`);
 		slideRole.innerHTML = work.role;
 		
 		if (work.self) {

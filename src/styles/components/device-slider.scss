@@ -1,12 +1,11 @@
 .swiper-container.swiper-container {
 	overflow: visible;
+	cursor: move;
 }
 
 .swiper-wrapper {
-	cursor: move;
-	
-	* {
-		cursor: move;
+	a {
+		cursor: pointer !important;
 	}
 }
 
@@ -32,6 +31,10 @@
 	@include breakpoint(lg) {
 		width: 21.2%;
 	}
+}
+
+.slide-info {
+	cursor: initial;
 }
 
 .swiper-slide img {
