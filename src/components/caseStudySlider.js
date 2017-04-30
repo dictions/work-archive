@@ -3,6 +3,8 @@ export default containerSelector => {
 	
 	if (!sliderContainer) return;
 	
+	sliderContainer.classList.add('swiper--loaded');
+	
 	const swiper = new window.Swiper(containerSelector, {
 		slidesPerView: 'auto',
 		spaceBetween: 40,
