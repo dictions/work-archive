@@ -19,6 +19,10 @@
 	}
 }
 
+.background-white {
+	background: white;
+}
+
 .underline {
 	border-bottom: 1px solid;
 }
@@ -37,6 +41,12 @@
 
 .align-right {
 	text-align: right;
+}
+
+.align-left--sm {
+	@include breakpoint(sm) {
+		text-align: left;
+	}
 }
 
 .white--hover:hover {
