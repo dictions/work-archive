@@ -19,6 +19,7 @@ export default containerSelector => {
 	const slideLink = sliderContainer.querySelector('.work-label__link');
 	const slideTitle = sliderContainer.querySelector('.work-label__title');
 	const slideRole = sliderContainer.querySelector('.work-label__role');
+	const slideCase = sliderContainer.querySelector('.work-label__case');
 	const slideSelfInitiated = sliderContainer.querySelector('.work-label__self');
 	const slideMono = sliderContainer.querySelector('.work-label__mono');
 
@@ -36,6 +37,12 @@ export default containerSelector => {
 			slideSelfInitiated.style.display = 'inline-block';
 		} else {
 			slideSelfInitiated.style.display = 'none';
+		}
+		
+		if (work.case) {
+			slideCase.style.display = 'inline-block';
+		} else {
+			slideCase.style.display = 'none';
 		}
 		
 		if (work.mono) {
