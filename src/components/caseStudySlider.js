@@ -11,6 +11,7 @@ export default containerSelector => {
 		loop: true,
 		prevButton: '.work-slide__prev',
 		nextButton: '.work-slide__next',
+		keyboardControl: true,
 		breakpoints: {
 			799: { spaceBetween: 20 }
 		}
